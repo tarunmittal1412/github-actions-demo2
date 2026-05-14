@@ -17,9 +17,9 @@ jobs:
 
       - name: Step 2 – Create a file
         run: |
-          echo "This file was created in Step 2" > demo.txt
+          echo This file was created in Step 2" > demo.txt
           ls -l
 
       - name: Step 3 – Read the file
         run: |
-          cat demoxt
+          cat demo.txt
