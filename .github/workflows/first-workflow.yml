@@ -1,4 +1,4 @@
-name: Jobs and Steps Demo
+name: Checkout Demo
 
 on:
   push:
@@ -10,16 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 – Check OS
-        run: |
-          uname -a
-          whoami
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Step 2 – Create a file
+      - name: List repository files
         run: |
-          echo "This file was created in Step 2" > demo.txt
           ls -l
-
-      - name: Step 3 – Read the file
-        run: |
-          cat demo.txt
